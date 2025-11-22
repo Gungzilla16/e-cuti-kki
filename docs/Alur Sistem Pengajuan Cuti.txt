@@ -1,0 +1,33 @@
++---------------------+        +---------------------+        +---------------------+        +--------------------+
+| Operator Sekolah    |        | Kepala Sekolah      |        | Sistem e-Cuti        |        | Sudin Pendidikan   |
++---------------------+        +---------------------+        +---------------------+        +--------------------+
+        |                           |                           |                           |
+        | 1. Isi Form Cuti          |                           |                           |
+        |-------------------------->|                           |                           |
+        |                           |                           |                           |
+        |        2. Submit Cuti --->|                           |                           |
+        |                           |                           |                           |
+        |                           |        3. Verifikasi ---> |                           |
+        |                           |                           |                           |
+        |                           |      (cek kuota, data PTK)|                           |
+        |                           |                           |                           |
+        |                           |<------- 4. Notifikasi ----|                           |
+        |                           |     (Menunggu Approval)   |                           |
+        |                           |                           |                           |
+        |                           | 5. Review & Approval KS   |                           |
+        |                           |-------------------------->|                           |
+        |                           |                           |                           |
+        |                           |           6. Notif sekolah|                           |
+        |                           |<--------------------------|                           |
+        |                           |                           |                           |
+        |                           |                           | 7. Kirim ke Sudin ------> |
+        |                           |                           |                           |
+        |                           |                           |                           | 8. Review Sudin
+        |                           |                           |                           | Approve / Reject
+        |                           |                           | <------------------------ |
+        |                           |                           |                           |
+        |                           |                           |----- 9. Update Status --->|
+        |                           |                           |                           |
+        |<----- 10. Notifikasi Final|                           |                           |
+        | (Disetujui / Ditolak)     |                           |                           |
+        |                           |                           |                           |
