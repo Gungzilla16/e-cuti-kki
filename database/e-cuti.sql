@@ -30,6 +30,7 @@ CREATE TABLE ptk (
     id_ptk INT AUTO_INCREMENT PRIMARY KEY,
     nama_lengkap VARCHAR (255) NOT NULL,
     jenis_kelamin VARCHAR (15),
+    tanggal_lahir DATE NOT NULL DEFAULT '2000-01-01',
     nikki CHAR (7),
     jabatan VARCHAR (30),
     npsn_sekolah CHAR (8) NOT NULL,
