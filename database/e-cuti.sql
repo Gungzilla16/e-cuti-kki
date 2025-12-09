@@ -29,9 +29,9 @@ CREATE TABLE users (
 CREATE TABLE ptk (
     id_ptk INT AUTO_INCREMENT PRIMARY KEY,
     nama_lengkap VARCHAR (255) NOT NULL,
+    nikki CHAR (7),
     jenis_kelamin VARCHAR (15),
     tanggal_lahir DATE NOT NULL DEFAULT '2000-01-01',
-    nikki CHAR (7),
     jabatan VARCHAR (30),
     npsn_sekolah CHAR (8) NOT NULL,
     FOREIGN KEY (npsn_sekolah) REFERENCES sekolah(npsn)
@@ -107,3 +107,10 @@ CREATE TABLE cuti_approval_log (
     FOREIGN KEY (id_cuti) REFERENCES cuti(id_cuti),
     FOREIGN KEY (id_user) REFERENCES users(id_user)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE cuti
+ADD COLUMN draft_pdf VARCHAR(255) NULL AFTER status,
+ADD COLUMN signed_pdf VARCHAR(255) NULL AFTER draft_pdf;
+
+ALTER TABLE cuti_approval_log
+ADD COLUMN bukti_ttd VARCHAR(255) NULL;
